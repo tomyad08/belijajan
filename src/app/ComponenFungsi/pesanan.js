@@ -10,6 +10,7 @@ const Pesanan = (props) => {
   const [pesanan, setPesanan] = useState(" ");
   const [keterangan, setKeterangan] = useState(" ");
   const [nama, setNama] = useState(" ");
+  const [alamat, setAlamat] = useState(" ");
 
   return (
     <div className="py-3" style={{ width: "400px" }}>
@@ -52,10 +53,17 @@ const Pesanan = (props) => {
           placeholder="Nama"
           onChange={(e) => setNama(e.target.value)}
         />
+        <input
+          className="py-1 px-2 border border-1 rounded-2 mt-3"
+          type="text"
+          style={{ width: "360px", height: "35px" }}
+          placeholder="Alamat/Patokan rumah"
+          onChange={(e) => setAlamat(e.target.value)}
+        />
         <a
-          href={`https://wa.me/6285861731880?text= Terima kasih *${nama}* telah berbelanja di belijajan.com. Berikut rincian pesanan kamu:            
-            *Nama Produk:* ${data.nama} | *Jumlah Pesanan:* ${pesanan} | *Jenis Pengiriman:* ${pengeriman} | *Keterangan:* ${keterangan}
-            Buat kamu yang pengen jajan, tapi gak sempet keluar? belijajan.com aja`}
+          href={`https://wa.me/6285861731880?text= Hallo Admin, saya *${nama}* dari *${alamat}. Saya mau pesan   
+            *${data.nama}* sebanyak *${pesanan}* pcs dan jenis Pengiriman yang saya pilih adalah *${pengeriman}*. Keterangan tambahan: *${keterangan}*.
+            || belanja lagi --> belijajan.com`}
           style={{ textDecoration: "none" }}
         >
           <div className="d-flex justify-content-center">
