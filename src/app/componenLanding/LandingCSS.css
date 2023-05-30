@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pangolin&display=swap");
+#sandwich {
+  display: none;
+}
+#jaburan {
+  font-size: 80px;
+}
+#jaburan1 {
+  font-size: 120px;
+}
+#solusi {
+  font-size: 25px;
+}
+
+@media screen and (max-width: 600px) {
+  #sandwich {
+    display: block;
+  }
+  #solusi {
+    font-size: 15px;
+  }
+  #jaburan {
+    font-size: 50px;
+  }
+  #jaburan1 {
+    font-size: 85px;
+  }
+  #menu {
+    display: none;
+  }
+  #explore {
+    font-size: 25px;
+  }
+}
