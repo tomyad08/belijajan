@@ -13,12 +13,12 @@ const Pesanan = (props) => {
 
   return (
     <div className="py-3" style={{ width: "400px" }}>
-      <h5
-        className="text-center"
+      <h1
+        className="text-center py-2"
         style={{ fontFamily: "'Pangolin', cursive", color: "white" }}
       >
-        {data.nama}
-      </h5>
+        <strong>{data.nama}</strong>
+      </h1>
 
       <div className="row justify-content-around">
         <input
@@ -53,12 +53,10 @@ const Pesanan = (props) => {
           onChange={(e) => setNama(e.target.value)}
         />
         <a
-          href={`https://wa.me/6285861731880?text= Terima kasih ${nama} telah berbelanja di belijajan.com.  Berikut rincian pesanan kamu: 
-            Nama Produk: ${data.nama}
-            Jumlah Pesanan: ${pesanan}
-            Jenis Pengiriman: ${pengeriman}
-            Keterangan: ${keterangan}
+          href={`https://wa.me/6285861731880?text= Terima kasih *${nama}* telah berbelanja di belijajan.com. Berikut rincian pesanan kamu:            
+            *Nama Produk:* ${data.nama} | *Jumlah Pesanan:* ${pesanan} | *Jenis Pengiriman:* ${pengeriman} | *Keterangan:* ${keterangan}
             Buat kamu yang pengen jajan, tapi gak sempet keluar? belijajan.com aja`}
+          style={{ textDecoration: "none" }}
         >
           <div className="d-flex justify-content-center">
             <button
