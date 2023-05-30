@@ -124,7 +124,7 @@ const Fungsi = (props) => {
                       overflow: "hidden",
                     }}
                   >
-                    <img
+                    <Image
                       src={value.foto}
                       alt=" "
                       width="200"
