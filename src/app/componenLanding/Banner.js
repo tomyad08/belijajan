@@ -27,22 +27,24 @@ const Banner = () => {
           >
             Gampang, coba deh klik tombol explore!
           </h6>
-          <button
-            className="btn border border-2 rounded-4 border-dark rounded-1 py-2 px-5 mt-2"
-            style={{
-              backgroundColor: "#09B123",
-            }}
-          >
-            <h5
+          <a href="#produk" style={{ textDecoration: "none" }}>
+            <button
+              className="btn border border-2 rounded-4 border-dark rounded-1 py-2 px-5 mt-2"
               style={{
-                color: "white",
-                textShadow: "4px 2px black",
+                backgroundColor: "#09B123",
               }}
-              id="explore"
             >
-              <strong>Explore</strong>
-            </h5>
-          </button>
+              <h5
+                style={{
+                  color: "white",
+                  textShadow: "4px 2px black",
+                }}
+                id="explore"
+              >
+                <strong>Explore</strong>
+              </h5>
+            </button>
+          </a>
         </div>
         <div className="col-md text-center mb-5 ">
           <Image src={gambar} alt="bakso" width="350" height="350" />

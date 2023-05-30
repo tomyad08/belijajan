@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className="row container my-5 justify-content-center mx-3">
+    <div className="row container my-5 justify-content-center mx-3" id="kontak">
       <div className="col-md">
         <h5>
           <strong>Alamat:</strong>

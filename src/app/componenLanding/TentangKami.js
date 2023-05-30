@@ -4,7 +4,7 @@ const TentangKami = () => {
   return (
     <div
       className="container mt-5"
-      id="tentangkami"
+      id="tentangKami"
       style={{ fontFamily: "Signika Negative', sans-serif" }}
     >
       <div

@@ -12,8 +12,16 @@
 #solusi {
   font-size: 25px;
 }
+#gambarProduk {
+  width: 200px;
+  height: 150px;
+}
 
 @media screen and (max-width: 600px) {
+  #gambarProduk {
+    width: 130px;
+    height: 90px;
+  }
   #sandwich {
     display: block;
   }

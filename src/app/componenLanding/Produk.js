@@ -1,11 +1,37 @@
 import Image from "next/image";
 import Link from "next/link";
-import gambar from "./assets/aset-bakso.png";
-import minuman from "./assets/Boba_1_.webp";
-import gorengan from "./assets/gorengan_1_.webp";
-import makanan from "./assets/Hotplate_1_.webp";
+import gambar from "./assets/kueLapis.jpg";
+import minuman from "./assets/esCoklat.jpg";
+import gorengan from "./assets/tahuBulat.jpg";
+import makanan from "./assets/Bakso.jpg";
 
 const Produk = () => {
+  const data = [
+    {
+      id: 1,
+      nama: "Kue",
+      gambar: gambar,
+      link: "/kue",
+    },
+    {
+      id: 2,
+      nama: "Makanan",
+      gambar: makanan,
+      link: "/makanan",
+    },
+    {
+      id: 3,
+      nama: "Gorengan",
+      gambar: gorengan,
+      link: "/gorengan",
+    },
+    {
+      id: 4,
+      nama: "Minuman",
+      gambar: minuman,
+      link: "/minuman",
+    },
+  ];
   return (
     <div className="container-fluid" id="produk">
       <h1
@@ -21,87 +47,37 @@ const Produk = () => {
         Mau pilih yang mana nih?
       </p>
       <div className="row justify-content-center">
-        <div
-          className="col-md-2 col-4 mx-1 my-1 border border-2 border-dark rounded-2 px-2 pt-2 pb-1"
-          style={{
-            backgroundColor: "white",
-            fontFamily: "'Pangolin', cursive",
-          }}
-        >
-          <Link href="/kue">
-            <div className="d-flex justify-content-center">
-              <Image src={gambar} alt=" " width="100" height="100" />
-            </div>
-          </Link>
-          <h6
-            className="text-center mt-1"
+        {data.map((value) => (
+          <div
+            className="col-md-2 col-4 mx-1 px-2 pt-2 pb-1"
             style={{
-              fontFamily: "Signika Negative', sans-serif",
-              textDecoration: "none",
-              color: "black",
+              backgroundColor: "white",
+              fontFamily: "'Pangolin', cursive",
             }}
+            key={value.id}
           >
-            Kue
-          </h6>
-        </div>
-
-        <div
-          className="col-md-2 col-4 mx-1 my-1 border rounded-2 border-dark border-2 px-2 pt-2 pb-1"
-          style={{
-            backgroundColor: "white",
-            fontFamily: "'Pangolin', cursive",
-          }}
-        >
-          <Link href="/gorengan">
-            <div className="d-flex justify-content-center">
-              <Image src={gorengan} alt=" " width="100" height="100" />
-            </div>
-          </Link>
-          <h6
-            className="text-center mt-1"
-            style={{ fontFamily: "Signika Negative', sans-serif" }}
-          >
-            Gorengan
-          </h6>
-        </div>
-        <div
-          className="col-md-2 col-4 mx-1 my-1 border border-dark rounded-2 border-2 px-2 pt-2 pb-1"
-          style={{
-            backgroundColor: "white",
-            fontFamily: "'Pangolin', cursive",
-          }}
-        >
-          <Link href="/makanan">
-            <div className="d-flex justify-content-center">
-              <Image src={makanan} alt=" " width="100" height="100" />
-            </div>
-          </Link>
-          <h6
-            className="text-center mt-1"
-            style={{ fontFamily: "Signika Negative', sans-serif" }}
-          >
-            Makanan
-          </h6>
-        </div>
-        <div
-          className="col-md-2 col-4 mx-1 my-1 border border-dark rounded-2 border-2 px-2 pt-2 pb-1"
-          style={{
-            backgroundColor: "white",
-            fontFamily: "'Pangolin', cursive",
-          }}
-        >
-          <Link href="/minuman">
-            <div className="d-flex justify-content-center">
-              <Image src={minuman} alt=" " width="100" height="100" />
-            </div>
-          </Link>
-          <h6
-            className="text-center mt-1"
-            style={{ fontFamily: "Signika Negative', sans-serif" }}
-          >
-            Minuman
-          </h6>
-        </div>
+            <Link href={value.link}>
+              <div className="d-flex justify-content-center">
+                <Image
+                  src={value.gambar}
+                  alt=" "
+                  className="border border-2 border-dark rounded-2"
+                  id="gambarProduk"
+                />
+              </div>
+            </Link>
+            <h6
+              className="text-center mt-1"
+              style={{
+                fontFamily: "Signika Negative', sans-serif",
+                textDecoration: "none",
+                color: "black",
+              }}
+            >
+              {value.nama}
+            </h6>
+          </div>
+        ))}
       </div>
     </div>
   );
