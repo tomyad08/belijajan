@@ -31,11 +31,12 @@ const Fungsi = (props) => {
   const handleShow = (value) => {
     const data = {
       nama: value.nama,
-      foto: value.foto,
+      harga: value.harga,
     };
     setPilihan(data);
     setKondisi(true);
   };
+
   return (
     <div>
       <div

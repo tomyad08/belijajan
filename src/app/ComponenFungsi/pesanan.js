@@ -3,7 +3,7 @@ import { useState } from "react";
 const Pesanan = (props) => {
   const data = {
     nama: props.produk.nama,
-    foto: props.produk.foto,
+    harga: props.produk.harga,
   };
 
   const [pengeriman, setPengiriman] = useState(" ");
@@ -12,6 +12,16 @@ const Pesanan = (props) => {
   const [nama, setNama] = useState(" ");
   const [alamat, setAlamat] = useState(" ");
   const [kondisi, setKondisi] = useState(true);
+
+  let hargaAkhir = [];
+  if (pengeriman === " ") {
+    hargaAkhir = pesanan * data.harga + 2000;
+  } else if (pengeriman === "regular") {
+    hargaAkhir = pesanan * data.harga + 2000;
+  } else if (pengeriman === "express") {
+    hargaAkhir = pesanan * data.harga + 6000;
+  }
+  console.log(hargaAkhir);
 
   return (
     <div className="py-3" style={{ width: "300px" }}>
@@ -81,16 +91,17 @@ const Pesanan = (props) => {
             />
             <a
               href={`https://wa.me/6285861731880?text= Hallo Admin, saya *${nama}* dari *${alamat}*. Saya mau pesan   
-              *${data.nama}* sebanyak *${pesanan}* pcs dan jenis Pengiriman yang saya pilih adalah *${pengeriman}*. Keterangan tambahan: *${keterangan}*.
+              *${data.nama}* sebanyak *${pesanan}* pcs dan jenis Pengiriman yang saya pilih adalah *${pengeriman}*. Keterangan tambahan: *${keterangan}*.  Harga total = *${hargaAkhir}*
               || belanja lagi --> belijajan.com`}
               style={{ textDecoration: "none" }}
             >
               <button
                 className="btn border rounded-5 border-dark mt-5"
                 style={{
-                  backgroundColor: "#19E20F",
+                  backgroundColor: "#09B123",
                   height: "40px",
                   width: "300px",
+                  color: "white",
                 }}
               >
                 <strong>Pesan</strong>
