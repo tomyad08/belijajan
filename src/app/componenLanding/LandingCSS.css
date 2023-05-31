@@ -16,8 +16,42 @@
   width: 200px;
   height: 150px;
 }
+#gambarBanner {
+  width: 400px;
+  height: 400px;
+}
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
+  #gambarProduk {
+    width: 130px;
+    height: 100px;
+  }
+  #sandwich {
+    display: block;
+  }
+  #gambarBanner {
+    width: 270px;
+    height: 270px;
+  }
+  #jaburan {
+    font-size: 40px;
+  }
+  #solusi {
+    font-size: 15px;
+  }
+  #menu {
+    display: none;
+  }
+  #explore {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 410px) and (max-width: 600px) {
+  #gambarBanner {
+    width: 350px;
+    height: 350px;
+  }
   #gambarProduk {
     width: 130px;
     height: 90px;
@@ -39,5 +73,29 @@
   }
   #explore {
     font-size: 25px;
+  }
+}
+
+@media screen and (min-width: 610px) and (max-width: 900px) {
+  #gambarProduk {
+    width: 130px;
+    height: 100px;
+  }
+
+  #gambarBanner {
+    width: 270px;
+    height: 270px;
+  }
+  #jaburan {
+    font-size: 40px;
+  }
+  #solusi {
+    font-size: 15px;
+  }
+  #menu {
+    display: none;
+  }
+  #explore {
+    font-size: 20px;
   }
 }

@@ -6,6 +6,24 @@ import Link from "next/link";
 
 const NavBar = () => {
   const [kondisi, setKondisi] = useState(false);
+
+  const data = [
+    {
+      id: 1,
+      nama: "Produk",
+      link: "#produk",
+    },
+    {
+      id: 2,
+      nama: "Tentang Kami",
+      link: "#tentangKami",
+    },
+    {
+      id: 3,
+      nama: "Kontak",
+      link: "#kontak",
+    },
+  ];
   return (
     <div
       style={{
@@ -40,47 +58,21 @@ const NavBar = () => {
         </div>
         <div className="col py-3">
           <div className="float-end">
-            <a
-              href="#produk"
-              style={{ textDecoration: "none", color: "white" }}
-            >
-              <span
-                className="mx-3 fs-4"
-                id="menu"
-                style={{ fontFamily: "'Signika Negative', sans-serif" }}
+            {data.map((value) => (
+              <a
+                href={value.link}
+                style={{ textDecoration: "none", color: "white" }}
+                key={value.id}
               >
-                Produk
-              </span>
-            </a>
-
-            <a
-              href="#tentangKami"
-              style={{ textDecoration: "none", color: "white" }}
-            >
-              <span
-                className="mx-3 fs-4"
-                id="menu"
-                style={{
-                  fontFamily: "'Signika Negative', sans-serif",
-                }}
-              >
-                Tentang Kami
-              </span>
-            </a>
-            <a
-              href="#kontak"
-              style={{ textDecoration: "none", color: "white" }}
-            >
-              <span
-                className="mx-3 fs-4"
-                id="menu"
-                style={{
-                  fontFamily: "'Signika Negative', sans-serif",
-                }}
-              >
-                Kontak
-              </span>
-            </a>
+                <span
+                  className="mx-3 fs-4"
+                  id="menu"
+                  style={{ fontFamily: "'Signika Negative', sans-serif" }}
+                >
+                  {value.nama}
+                </span>
+              </a>
+            ))}
             <span>
               <Link href="/informasi" style={{ textDecoration: "none" }}>
                 <svg
@@ -107,33 +99,19 @@ const NavBar = () => {
           }}
           className="px-1 py-2 border border-0 rounded-3 d-flex justify-content-around"
         >
-          <a href="#produk" style={{ textDecoration: "none", color: "black" }}>
-            <div
-              id="menuSandwich"
-              style={{ fontFamily: "'Signika Negative', sans-serif" }}
+          {data.map((value) => (
+            <a
+              href={value.link}
+              style={{ textDecoration: "none", color: "black" }}
             >
-              Produk
-            </div>
-          </a>
-          <a
-            href="#tentangKami"
-            style={{ textDecoration: "none", color: "black" }}
-          >
-            <div
-              id="menuSandwich"
-              style={{ fontFamily: "'Signika Negative', sans-serif" }}
-            >
-              Tentang Kami
-            </div>
-          </a>
-          <a href="#kontak" style={{ textDecoration: "none", color: "black" }}>
-            <div
-              id="menuSandwich"
-              style={{ fontFamily: "'Signika Negative', sans-serif" }}
-            >
-              Kontak
-            </div>
-          </a>
+              <div
+                id="menuSandwich"
+                style={{ fontFamily: "'Signika Negative', sans-serif" }}
+              >
+                {value.nama}
+              </div>
+            </a>
+          ))}
         </div>
       )}
     </div>

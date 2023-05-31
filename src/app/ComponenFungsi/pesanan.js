@@ -14,7 +14,7 @@ const Pesanan = (props) => {
   const [kondisi, setKondisi] = useState(true);
 
   return (
-    <div className="py-3" style={{ width: "400px" }}>
+    <div className="py-3" style={{ width: "300px" }}>
       <div className="float-end me-2 mb-2" onClick={() => setKondisi(!kondisi)}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +32,7 @@ const Pesanan = (props) => {
       </div>
       <div>
         <h1
-          className="ms-4 py-2"
+          className=" py-2"
           style={{ fontFamily: "'Pangolin', cursive", color: "white" }}
         >
           <strong>{data.nama}</strong>
@@ -40,7 +40,7 @@ const Pesanan = (props) => {
       </div>
       {kondisi && (
         <div>
-          <div className="row justify-content-around">
+          <div className="row justify-content-between">
             <input
               className="py-1 px-2 border border-1 rounded-2"
               type="number"
@@ -85,18 +85,16 @@ const Pesanan = (props) => {
               || belanja lagi --> belijajan.com`}
               style={{ textDecoration: "none" }}
             >
-              <div className="d-flex justify-content-center">
-                <button
-                  className="btn border border-dark mt-3"
-                  style={{
-                    backgroundColor: "#19E20F",
-                    height: "40px",
-                    width: "360px",
-                  }}
-                >
-                  <strong>Pesan</strong>
-                </button>
-              </div>
+              <button
+                className="btn border rounded-5 border-dark mt-5"
+                style={{
+                  backgroundColor: "#19E20F",
+                  height: "40px",
+                  width: "300px",
+                }}
+              >
+                <strong>Pesan</strong>
+              </button>
             </a>
           </div>
         </div>

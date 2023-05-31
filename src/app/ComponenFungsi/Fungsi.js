@@ -112,7 +112,7 @@ const Fungsi = (props) => {
               })
               .map((value) => (
                 <div
-                  className="col-md-2 col-6 "
+                  className="col-md-3 col-6 "
                   onClick={() => handleShow(value)}
                   key={value.id}
                 >
@@ -124,13 +124,7 @@ const Fungsi = (props) => {
                       overflow: "hidden",
                     }}
                   >
-                    <Image
-                      src={value.foto}
-                      alt=" "
-                      width="200"
-                      height="150"
-                      id="gambar"
-                    />
+                    <img src={value.foto} alt=" " width="100%" id="gambar" />
                     <figcaption>
                       <h6
                         style={{

@@ -47,7 +47,8 @@ const Banner = () => {
           </a>
         </div>
         <div className="col-md text-center mb-5 ">
-          <Image src={gambar} alt="bakso" width="350" height="350" />
+          <Image src={gambar} alt="bakso" id="gambarBanner" />
+          {/* width="350" height="350" */}
         </div>
       </div>
     </div>
