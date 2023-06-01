@@ -103,6 +103,7 @@ const NavBar = () => {
             <a
               href={value.link}
               style={{ textDecoration: "none", color: "black" }}
+              key={value.id}
             >
               <div
                 id="menuSandwich"
