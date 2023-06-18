@@ -40,7 +40,7 @@ const Fungsi = (props) => {
   return (
     <div>
       <div
-        className="row justify-content-between py-3 px-3"
+        className="row justify-content-between p-3"
         style={{ background: "linear-gradient(#B1001B, #D9071C 50%)" }}
       >
         <div className="col-2">
@@ -64,7 +64,7 @@ const Fungsi = (props) => {
           <input
             onChange={(e) => setNama(e.target.value)}
             style={{ width: "100%" }}
-            className="border border-2 rounded-5 py-2 px-3"
+            className="border btn btn-light border-2 rounded-5 py-1"
             placeholder="Silahkan ketik di sini..."
           />
         </div>
@@ -113,7 +113,7 @@ const Fungsi = (props) => {
               })
               .map((value) => (
                 <div
-                  className="col-md-3 col-6 "
+                  className="col-lg-2 col-6 "
                   onClick={() => handleShow(value)}
                   key={value.id}
                 >

@@ -21,10 +21,9 @@ const Pesanan = (props) => {
   } else if (pengeriman === "express") {
     hargaAkhir = pesanan * data.harga + 6000;
   }
-  console.log(hargaAkhir);
 
   return (
-    <div className="py-3" style={{ width: "300px" }}>
+    <div className="py-2" style={{ width: "300px" }}>
       <div className="float-end me-2 mb-2" onClick={() => setKondisi(!kondisi)}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +41,7 @@ const Pesanan = (props) => {
       </div>
       <div>
         <h1
-          className=" py-2"
+          className="pb-1"
           style={{ fontFamily: "'Pangolin', cursive", color: "white" }}
         >
           <strong>{data.nama}</strong>
