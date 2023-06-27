@@ -125,7 +125,7 @@ const Fungsi = (props) => {
                       overflow: "hidden",
                     }}
                   >
-                    <img src={value.foto} alt=" " width="100%" id="gambar" />
+                    <img src={value.link} alt=" " width="100%" id="gambar" />
                     <figcaption>
                       <h6
                         style={{
