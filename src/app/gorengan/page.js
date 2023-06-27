@@ -4,7 +4,7 @@ import Fungsi from "../ComponenFungsi/Fungsi";
 const Makanan = () => {
   return (
     <div>
-      <Fungsi link={"https://sheetdb.io/api/v1/26m6nbp1kb97j"} />
+      <Fungsi link={"https://kue-api.vercel.app/produk"} />
     </div>
   );
 };
